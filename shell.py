@@ -508,6 +508,7 @@ def like():
     con_like = 0
     con_like_2 = 0
     con_like_3 = 0
+    
     for s in range(100):
         try:
             
@@ -554,6 +555,7 @@ def like():
                     if con_like_2 == 5:
                         print('con_like_2')
                         break
+                    con_like_2 +=1
                     print('like_old_count:',like_old_count)
                     print('==')
                     print('like_new_count:',like_new_count)
@@ -633,6 +635,12 @@ def like():
             print('Subscribe_erroo:   ',s)
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight/2);")
             like_erro()
+    
+
 
 like()
 Subscribe()
+try:
+    driver.close()
+except:
+    pass
